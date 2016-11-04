@@ -8,6 +8,7 @@ $(document).ready(function() {
     lose = 'lose',
     total = 'win lose tie';
 
+  // Adds class if the user is a winner
   function winner() {
     $user.addClass(win);
     $computer.addClass(lose);
@@ -17,6 +18,7 @@ $(document).ready(function() {
     $resultBox.addClass(tie);
   }
 
+  // Adds class if the user is a loser
   function loser() {
     $user.addClass(lose);
     $computer.addClass(win);
@@ -41,6 +43,7 @@ $(document).ready(function() {
   function result(user, comp) {
     console.log(user + '==' + comp);
 
+    // Checks if the results are tied, replace images with corresponding.
     if (user === comp) {
       tied();
       if (comp === "Rock") {
@@ -50,6 +53,8 @@ $(document).ready(function() {
       } else {
         $resultBox.find('img').attr('src', 'images/Scissors.png');
       }
+
+      // Checks if the user inputs Rock, replace images with corresponding.
     } else if (user === "Rock") {
       $user.find('img').attr('src', 'images/Rock.png');
       if (comp === "Scissors") {
@@ -59,6 +64,8 @@ $(document).ready(function() {
         $computer.find('img').attr('src', 'images/Paper.png');
         loser();
       }
+
+      // Checks if the user inputs Paper, replace images with corresponding.
     } else if (user === "Paper") {
       $user.find('img').attr('src', 'images/Paper.png');
       if (comp === "Rock") {
@@ -68,6 +75,8 @@ $(document).ready(function() {
         $computer.find('img').attr('src', 'images/Scissors.png');
         loser();
       }
+
+      // Checks if the user inputs Scissors, replace images with corresponding.
     } else if (user === "Scissors") {
       $user.find('img').attr('src', 'images/Scissors.png');
       if (comp === "Paper") {
