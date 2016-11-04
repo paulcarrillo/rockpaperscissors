@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var $btn = $("button");
 
+  // Function for the computer choice, returns value on function call
   function compChoice() {
     var computerChoice = Math.random();
 
@@ -15,6 +16,7 @@ $(document).ready(function() {
     return computerChoice;
   }
 
+  // Rock Paper Scissors logic
   function result(user, comp) {
     console.log(user + '==' + comp);
 
@@ -42,6 +44,7 @@ $(document).ready(function() {
     }
   }
 
+  // User btn click, and run result function passing user's choice and computers.
   $btn.click(function() {
     var userChoice = $(this).text();
 
