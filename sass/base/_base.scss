@@ -1,0 +1,12 @@
+.max-container {
+  max-width: $max;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: $desktop;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5% 5%;
+}
